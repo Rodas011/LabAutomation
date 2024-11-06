@@ -5,7 +5,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.rest.interactions.Get;
 
-public class ConsumerThe implements Task {
+public class ConsumeThe implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
@@ -17,7 +17,10 @@ public class ConsumerThe implements Task {
         );
     }
 
-    public static ConsumerThe service(){
-        return Tasks.instrumented(ConsumerThe.class);
+    public static ConsumeThe service(){
+        return Tasks.instrumented(ConsumeThe.class);
     }
 }
+
+
+

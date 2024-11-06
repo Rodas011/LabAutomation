@@ -1,7 +1,7 @@
 package co.com.udea.calidad.gestionEquipajes.stepdefinitions;
 
 import co.com.udea.calidad.gestionEquipajes.tasks.ConnectTo;
-import co.com.udea.calidad.gestionEquipajes.tasks.ConsumerThe;
+import co.com.udea.calidad.gestionEquipajes.tasks.ConsumeThe;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -11,7 +11,6 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeThatResponse;
 import org.hamcrest.Matchers;
-
 
 public class ContinentsStepDefinition {
 
@@ -29,7 +28,7 @@ public class ContinentsStepDefinition {
     }
     @When("the user gets the continents information")
     public void theUserGetsTheContinentsInformation() {
-        user.attemptsTo(ConsumerThe.service());
+        user.attemptsTo(ConsumeThe.service());
     }
     @Then("the user can see the continents names")
     public void theUserCanSeeTheContinentsNames() {
@@ -37,11 +36,12 @@ public class ContinentsStepDefinition {
                 .body("[0].name", Matchers.equalTo("Africa"))
                 .body("[1].name", Matchers.equalTo("Antarctica"))
                 .body("[2].name", Matchers.equalTo("Asia"))
-                .body("[3].name", Matchers.equalTo("Europe"))
+                .body("[3].name", Matchers.equalTo("Europa"))
                 .body("[4].name", Matchers.equalTo("North America"))
                 .body("[5].name", Matchers.equalTo("Oceania"))
                 .body("[6].name", Matchers.equalTo("South America"))
         ));
     }
-
 }
+
+

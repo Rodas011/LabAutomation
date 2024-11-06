@@ -6,3 +6,13 @@
       Given the user is connected to the service
       When the user gets the continents information
       Then the user can see the continents names
+
+
+
+
+
+
+
+
+
+
